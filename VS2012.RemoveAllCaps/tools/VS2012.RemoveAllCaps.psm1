@@ -1,7 +1,15 @@
 function Disable-AllCaps{
-	Set-ItemProperty -Path HKCU:\Software\Microsoft\VisualStudio\11.0\General -Name SuppressUppercaseConversion -Type DWord -Value 1
+	Set-AllCaps 1
 }
 
 function Enable-AllCaps{
-	Set-ItemProperty -Path HKCU:\Software\Microsoft\VisualStudio\11.0\General -Name SuppressUppercaseConversion -Type DWord -Value 0
+	Set-AllCaps 0
 }
+
+function Set-AllCaps ($value) {
+	$root = $DTE.RegistryRoot
+	$path = "HKCU:\$root\General"
+	Set-ItemProperty -Path $path -Name SuppressUppercaseConversion -Type DWord -Value $value
+	Write-Host "Please restart Visual Studio to take effect"
+}
+
