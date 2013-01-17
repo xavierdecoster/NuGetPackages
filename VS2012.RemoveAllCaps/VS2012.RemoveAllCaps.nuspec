@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>1.0.0</version>
+    <authors>Xavier Decoster</authors>
+    <owners />
+    <id>VS2012.RemoveAllCaps</id>
+    <title />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Toggle VS2012 shouting behavior</description>
+    <tags>VS2012</tags>
+  </metadata>
+</package>
